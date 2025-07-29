@@ -345,3 +345,9 @@ variable "outside_ip_address_type" {
   type        = string
   default     = "PublicIpv4"
 }
+
+variable "transport_transit_gateway_attachment_id" {
+  description = "Required when outside_ip_address_type is set to PrivateIpv4. The attachment ID of the Transit Gateway attachment to Direct Connect Gateway"
+  type        = string
+  default     = null
+}
