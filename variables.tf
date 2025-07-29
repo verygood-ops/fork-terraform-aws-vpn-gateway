@@ -338,3 +338,10 @@ variable "tunnel2_enable_tunnel_lifecycle_control" {
   type        = bool
   default     = null
 }
+
+
+variable "outside_ip_address_type" {
+  description = "(Optional) Indicates if a Public S2S VPN or Private S2S VPN over AWS Direct Connect."
+  type        = string
+  default     = "PublicIpv4"
+}
