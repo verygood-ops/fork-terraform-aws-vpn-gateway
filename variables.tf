@@ -338,3 +338,16 @@ variable "tunnel2_enable_tunnel_lifecycle_control" {
   type        = bool
   default     = null
 }
+
+
+variable "outside_ip_address_type" {
+  description = "(Optional) Indicates if a Public S2S VPN or Private S2S VPN over AWS Direct Connect."
+  type        = string
+  default     = "PublicIpv4"
+}
+
+variable "transport_transit_gateway_attachment_id" {
+  description = "Required when outside_ip_address_type is set to PrivateIpv4. The attachment ID of the Transit Gateway attachment to Direct Connect Gateway"
+  type        = string
+  default     = null
+}

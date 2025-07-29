@@ -75,6 +75,9 @@ resource "aws_vpn_connection" "default" {
   tunnel1_ike_versions = var.tunnel1_ike_versions
   tunnel2_ike_versions = var.tunnel2_ike_versions
 
+  outside_ip_address_type                 = var.outside_ip_address_type
+  transport_transit_gateway_attachment_id = var.transport_transit_gateway_attachment_id
+
   dynamic "tunnel1_log_options" {
     for_each = [var.tunnel1_log_options]
 
@@ -187,6 +190,10 @@ resource "aws_vpn_connection" "tunnel" {
   tunnel1_ike_versions = var.tunnel1_ike_versions
   tunnel2_ike_versions = var.tunnel2_ike_versions
 
+  outside_ip_address_type                 = var.outside_ip_address_type
+  transport_transit_gateway_attachment_id = var.transport_transit_gateway_attachment_id
+
+
   dynamic "tunnel1_log_options" {
     for_each = [var.tunnel1_log_options]
 
@@ -295,6 +302,9 @@ resource "aws_vpn_connection" "preshared" {
 
   tunnel1_ike_versions = var.tunnel1_ike_versions
   tunnel2_ike_versions = var.tunnel2_ike_versions
+
+  outside_ip_address_type                 = var.outside_ip_address_type
+  transport_transit_gateway_attachment_id = var.transport_transit_gateway_attachment_id
 
   dynamic "tunnel1_log_options" {
     for_each = [var.tunnel1_log_options]
@@ -410,6 +420,9 @@ resource "aws_vpn_connection" "tunnel_preshared" {
 
   tunnel1_ike_versions = var.tunnel1_ike_versions
   tunnel2_ike_versions = var.tunnel2_ike_versions
+
+  outside_ip_address_type                 = var.outside_ip_address_type
+  transport_transit_gateway_attachment_id = var.transport_transit_gateway_attachment_id
 
   dynamic "tunnel1_log_options" {
     for_each = [var.tunnel1_log_options]
