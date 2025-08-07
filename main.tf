@@ -139,8 +139,8 @@ resource "aws_vpn_connection" "tunnel" {
   static_routes_only  = var.vpn_connection_static_routes_only
   enable_acceleration = var.vpn_connection_enable_acceleration
 
-  tunnel1_inside_cidr = var.tunnel1_inside_cidr
-  tunnel2_inside_cidr = var.tunnel2_inside_cidr
+  tunnel1_inside_cidr   = var.tunnel1_inside_cidr
+  tunnel2_inside_cidr   = var.tunnel2_inside_cidr
   preshared_key_storage = "SecretsManager"
 
   tunnel1_phase1_dh_group_numbers = var.tunnel1_phase1_dh_group_numbers
